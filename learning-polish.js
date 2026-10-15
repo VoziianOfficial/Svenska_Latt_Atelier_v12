@@ -140,7 +140,27 @@
      grid.replaceChildren(frag);
    });
  }
- function polish(){flashDesign();addSpeedControllers();updateDays();}
+ function polishSpeakButtons(){
+   const icon='<svg class="speak-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m11 5-6 4H2v6h3l6 4V5Z"/><path d="M15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14"/></svg>';
+   document.querySelectorAll('#page button[data-action="speak"]').forEach(btn=>{
+     if(btn.querySelector('.speak-icon'))return;
+     if(btn.classList.contains('number-item')){
+       const badge=btn.querySelector('span');
+       if(badge){badge.classList.add('speak-badge');badge.innerHTML=icon;}
+       return;
+     }
+     const label=btn.closest('.example-item')?'':btn.textContent.replace(/[🔊▶️]/gu,'').trim();
+     btn.innerHTML=icon;
+     if(label){const text=document.createElement('span');text.textContent=label;btn.appendChild(text);}
+     else{
+       btn.classList.add('speak-icon-only');
+       if(!btn.hasAttribute('aria-label'))btn.setAttribute('aria-label',typeof t==='function'?t('speak'):'Listen');
+       btn.title=btn.getAttribute('aria-label');
+     }
+     btn.type='button';
+   });
+ }
+ function polish(){flashDesign();polishSpeakButtons();addSpeedControllers();updateDays();}
  if(typeof render==='function'){
    const previous=render;
    render=function(){previous();polish();};
