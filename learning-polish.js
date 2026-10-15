@@ -115,7 +115,18 @@
    const card=document.querySelector('#page .flash-card');if(!card)return;
    const row=card.closest('.flash-layout')?.querySelector('.split:has(#flash-kind)');if(row)row.classList.add('flash-compact-filters');
    const active=typeof flash!=='undefined'&&typeof getWord==='function'?getWord(flash.ids[flash.index]):null;
-   if(active&&typeof window.svPhotoForWord==='function')card.style.setProperty('--flash-photo',`url("${window.svPhotoForWord(active)}")`);
+   const url=active&&typeof window.svFlashPhotoForWord==='function'?window.svFlashPhotoForWord(active):null;
+   // The card starts with a neutral background while its exact image loads.
+   card.style.removeProperty('--flash-photo');
+   card.classList.remove('has-word-photo');
+   if(!url)return;
+   const photo=new Image();
+   photo.onload=()=>{
+     if(!card.isConnected)return;
+     card.style.setProperty('--flash-photo',`url(${JSON.stringify(url)})`);
+     card.classList.add('has-word-photo');
+   };
+   photo.src=url;
  }
  function updateDays(){
    // Continuous rolling calendar: past days + upcoming dates, never marking future visits.

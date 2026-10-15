@@ -1,79 +1,298 @@
-# Svenska Lätt — Atelier v12
+# 🇸🇪 Svenska Lätt 🐿️
+### Learn Swedish. Speak Confidently. Enjoy the Journey.
 
-Один проект веб-приложения для изучения шведского языка SFI A–D. Эта сборка прежде всего обновляет **оформление**, не заменяя логику упражнений и хранения результатов.
+**Svenska Lätt** is a modern, interactive Swedish language learning platform designed to make learning Swedish simple, enjoyable, and accessible to everyone.
 
-## Публикация на GitHub Pages
+From your very first Swedish words to **SFI Level D**, Svenska Lätt brings lessons, vocabulary, grammar, flashcards, listening exercises, quizzes, and reading practice together in one beautiful learning space.
 
-1. Распакуйте архив.
-2. Загрузите **содержимое** папки `Svenska_Latt_Atelier_v12` в корень репозитория GitHub (рядом должны находиться `index.html`, `app.js`, `atelier.css`, JSON-файлы и прочее).
-3. В GitHub `Settings → Pages` выберите ветку `main` и каталог `/(root)`.
-4. После публикации обновите страницу с очисткой кэша браузера. Service Worker использует новую версию кэша `svenska-latt-v21-atelier`.
+**Learn. Practice. Repeat. Grow.** 🚀
 
-Сайт использует относительные пути и должен открываться также из подпапки `username.github.io/repository/`.
+> 💙 *Lite svenska varje dag — stora framsteg med tiden!*
+>
+> A little Swedish every day leads to big progress over time.
 
-## Изображения и оформление
+---
 
-Используются **реальные стоковые фотографии** с Pexels, а не сгенерированные изображения. Чтобы не утяжелять архив, фотографии загружаются через `images.pexels.com` при открытии страниц; для отображения фотографий нужен интернет. Если внешний CDN заблокирован, предусмотрены цветные текстовые заглушки, а не нарисованные сцены. Доступность конкретных фотографий может измениться на стороне поставщика; изображения не хранятся в ZIP.
+## ✨ Welcome to Svenska Lätt
 
-Источник: [Pexels](https://www.pexels.com/), условия [Pexels License](https://www.pexels.com/license/).
+Learning a new language should feel like an exciting journey, not an endless list of grammar rules.
 
-Версия включает отдельный `atelier.css` и `atelier.js` — единую новую визуальную надстройку поверх базовых компонентов. Старые временные `patch.css`/`patch.js` удалены. Карточки «Что учить сегодня» и тематические подборки прокручиваются горизонтально: 6 видимых на больших экранах, 4 на планшетах, 2 на телефонах. Курсы по уровням — 3 на десктопе; есть стрелки и естественный свайп.
+At Svenska Lätt, we believe that small daily steps lead to meaningful progress.
 
-## Локальная проверка
+Whether you're just beginning to learn Swedish or looking to improve your existing knowledge, you'll find interactive tools to help you learn, practice, and grow.
 
-Открывайте проект через HTTP-сервер, не двойным кликом по `index.html`:
+🌱 **Start small.**
+
+📚 **Discover something new.**
+
+🧠 **Challenge yourself.**
+
+🏆 **Celebrate your achievements.**
+
+🐿️ **And never stop learning!**
+
+---
+
+## 🚀 Features & Learning Tools
+
+| Feature | Description |
+|---|---|
+| 📚 **SFI A–D Courses** | 50 structured lessons across four learning levels |
+| 🗂️ **Vocabulary Library** | 1,000+ Swedish words organized into practical topics |
+| 🃏 **Interactive Flashcards** | Beautiful photo-based cards with translations and audio |
+| 🧠 **Quizzes & Challenges** | 14 interactive exercise modes |
+| 🔁 **Smart Review** | Review saved words and strengthen your memory |
+| 🔤 **Swedish Alphabet** | All 29 Swedish letters with pronunciation examples |
+| 🔢 **Numbers & Counting** | Learn Swedish numbers, tens, hundreds, and more |
+| 📝 **Grammar Cheat Sheets** | Easy-to-understand tables, examples, and grammar rules |
+| 📖 **Mini Books** | 12 short Swedish stories with reading exercises |
+| 🎬 **Swedish Videos** | Educational videos and listening resources |
+| 🎧 **Audio Learning** | Swedish text-to-speech with adjustable playback speed |
+| 🔎 **Smart Search** | Find words, lessons, and learning topics |
+| 🏆 **Progress Tracking** | Earn XP, unlock levels, and track learning activity |
+
+---
+
+## 🎓 Learn Swedish Step by Step
+
+### 🌱 SFI A — Your First Steps
+
+Start your Swedish journey with simple and practical language.
+
+Learn greetings, numbers, basic vocabulary, pronunciation, and everyday expressions.
+
+### 🌿 SFI B — Everyday Swedish
+
+Build your vocabulary and learn to communicate in familiar situations.
+
+Explore family, shopping, education, work, transportation, and daily conversations.
+
+### 🌻 SFI C — Build Your Confidence
+
+Develop your grammar skills and learn to express yourself more clearly.
+
+Practice describing events, writing messages, reading longer texts, and understanding conversations.
+
+### 🏆 SFI D — Express Yourself
+
+Take your Swedish to the next level.
+
+Explore more advanced grammar, writing, opinions, arguments, and real-world communication.
+
+**Your journey. Your pace. Your progress.** 💙
+
+---
+
+## 🃏 Vocabulary That Comes to Life
+
+Learning vocabulary should be more than memorizing words.
+
+Svenska Lätt combines words with photographs, examples, and pronunciation to create a more engaging experience.
+
+Explore useful topics including:
+
+🏡 Home & Everyday Life  
+👨‍👩‍👧 Family & Relationships  
+🍎 Food & Shopping  
+🩺 Body & Health  
+🎓 School & Education  
+💼 Work & Careers  
+🚆 Travel & Transportation  
+🌿 Nature & Animals  
+☀️ Weather & Seasons  
+💬 Communication & Feelings  
+
+**See it. Hear it. Remember it.**
+
+---
+
+## 🎧 Listen, Read & Understand
+
+Improve your Swedish listening and reading skills through real-world learning experiences.
+
+🔊 Listen to Swedish words and sentences.
+
+🐢 Choose a slower playback speed when needed.
+
+📖 Explore short Swedish stories.
+
+🎬 Discover Swedish educational videos.
+
+🧠 Test your understanding with interactive questions.
+
+**Listen carefully. Practice regularly. Speak naturally.**
+
+*Audio quality and available Swedish voices depend on your device and browser.*
+
+---
+
+## 🏅 Make Every Day Count
+
+Every small achievement matters!
+
+With Svenska Lätt, you can:
+
+- ⭐ Earn XP by completing exercises.
+- 🔥 Track your study days.
+- 📊 Monitor your learning activity.
+- 📚 Keep track of completed lessons.
+- 🧠 Save and review vocabulary.
+- 🏆 Reach a new account level every 500 XP.
+
+Because learning is not about being perfect.
+
+**It's about becoming a little better every day.**
+
+---
+
+## 🌍 Learn Your Way
+
+Svenska Lätt offers four interface languages:
+
+🇬🇧 **English**  
+🇸🇪 **Swedish**  
+🇺🇦 **Ukrainian**  
+🇷🇺 **Russian**
+
+Choose the language you're most comfortable with and focus on learning Swedish.
+
+*Some detailed learning explanations are currently available primarily in Russian.*
+
+---
+
+## 📱 Learn Anywhere, Anytime
+
+Enjoy a responsive learning experience across your devices.
+
+💻 **Desktop** — A spacious and organized learning environment.
+
+📱 **Mobile** — Practice vocabulary and quizzes wherever you go.
+
+✨ **Tablet** — A comfortable experience for reading, listening, and studying.
+
+Whether you're at home, in a café, or on your way to school, Swedish learning is always within reach.
+
+---
+
+## 🛠️ Technologies
+
+Svenska Lätt is built using modern web technologies:
+
+- **HTML5** — Semantic website structure
+- **CSS3** — Responsive layouts, animations, and visual design
+- **JavaScript** — Interactive learning functionality
+- **Web Speech API** — Swedish text-to-speech
+- **Local Storage** — Local progress and preferences
+- **Python** — Optional backend functionality
+- **Supabase** — Prepared for cloud authentication and progress synchronization
+
+The platform is designed with performance, accessibility, and ease of use in mind.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
 
 ```bash
-python3 -m http.server 8765
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
 ```
 
-Затем посетите `http://127.0.0.1:8765`.
+### 2. Open the Project
 
-Для локального Python API и SQLite используйте:
+Navigate to the downloaded project folder.
 
-```bash
-python3 server.py
-```
+### 3. Start the Website
 
-Программные тесты:
+Run the website using a local development server, or deploy the static files to GitHub Pages.
 
-```bash
-node tests/quality.cjs
-python3 -m pytest -q tests/test_server.py
-```
+For the Python backend, follow the configuration instructions included in the project.
 
-## Подключение Supabase — следующий шаг
+### 4. Start Learning!
 
-В `supabase-config.js` заполняются **только** адрес проекта и публичный `publishable key`. В `SUPABASE_SETUP.sql` находятся таблицы и политики доступа. Не публикуйте сервисный секрет, пароль базы или `service_role`.
+Choose your preferred interface language, select your SFI level, and begin your Swedish learning journey.
 
-Пока Supabase не настроен, GitHub Pages работает в гостевом режиме и хранит результаты в конкретном браузере. Для облачной регистрации, синхронизации между устройствами и восстановления аккаунта требуется подключение Supabase и проверка реального облачного сценария.
+🇸🇪 **Välkommen till Svenska Lätt!**
 
-## Что проверялось
+**Note:** Cloud accounts and cross-device progress synchronization require Supabase configuration.
 
-- Работоспособность существующих учебных данных: 50 уроков, 1006 слов, 42 темы, 12 книг, 14 режимов тренировки.
-- Регистрация и хранение данных на локальном Python-сервере (автоматические тесты).
-- Клиентские сценарии в Chromium: горизонтальная прокрутка и кнопки слайдеров, выбор фильтров и поиск, открытие книги кликом по карточке, запуск теста, имя и уровень профиля, RU/EN/SV/UK, отсутствие горизонтального переполнения на 320/375/390/768/1024/1365 px.
-- Размеры текста и кнопок в карточках, в частности шведские числа без переносов.
+---
 
-Это технические проверки, а не гарантия идеального отображения на всех конкретных устройствах или стопроцентной доступности внешних фотохостингов. Для выпуска публичного продукта также требуется сверить юридические документы с реальным владельцем платформы.
+## 💙 Our Philosophy
 
+We believe that language learning should be accessible, motivating, and enjoyable.
 
-## v11 — voice speed, flashcard dimensions, calendar and load performance
+You don't need to learn everything at once.
 
-- Playback speed: Very slow 0.56×, Slow 0.76×, Normal 1.0×. The selection is saved locally and shared by all narration buttons. Shorter TTS segments improve long-text playback reliability. A softer pitch and a preferred natural Swedish system voice are used when available; final quality depends on installed voices.
-- Flashcards are compact and square, with a full-bleed photo and contrast overlay. Filter selects sit on one compact row. Review/word cards have horizontal buttons and a three-column desktop layout.
-- Study dates show consecutive calendar days over two or four weeks; future dates do not count as completed activities.
-- Removed a MutationObserver ↔ image-recreation feedback loop that repeatedly rebuilt thumbnails and slowed rendering. Existing photographs remain network-hosted, lazy-loaded where possible, and load-time can still vary with the network.
-- The squirrel brand photograph comes from **Tiia Monto, “Red squirrel head.jpg”**, Wikimedia Commons, licensed under **CC BY-SA 4.0**. https://commons.wikimedia.org/wiki/File:Red_squirrel_head.jpg ; license https://creativecommons.org/licenses/by-sa/4.0/ . The photo is remotely hosted and a local generic-logo fallback appears when offline. Do not remove the attribution.
-- `learning-polish.css` and `learning-polish.js` are loaded after v10. Update/replace all site files together (including the service worker) and hard-refresh GitHub Pages.
+You don't need to understand every grammar rule immediately.
 
+And you definitely don't need to be afraid of making mistakes.
 
-## v12 — performance and Swedish voice selection
+All you need is curiosity, consistency, and the courage to keep going.
 
-- The unauthenticated site now **does not load the Supabase SDK** on start. The SDK is loaded only when the public Supabase URL and publishable key have been configured; no private credentials should ever be placed in the frontend.
-- Image URLs and study data are unchanged, but CSS backgrounds are assigned only when nearing the viewport (`IntersectionObserver`), while normal image tags use lazy loading and asynchronous decoding.
-- The service worker saves successfully viewed Pexels/Wikimedia photos in a bounded image cache (150 entries). **First visit still needs an internet connection**, and source websites may still block individual photos. Offline photos are available only after they were viewed successfully once while online. New release uses cache `svenska-latt-v23-shell` and `svenska-latt-v23-photos`.
-- Narration controls keep the three requested speed modes and now offer a **voice picker if the device has several Swedish voices**. The selected voice and speed persist in localStorage. No bundled natural TTS audio or commercial speech API is included; voice quality remains dependent on the operating system.
-- The squirrel photo uses the Wikimedia Commons file credited in the footer; the URL now uses the verified 250 px preview. Because the image is remote, a generic favicon fallback remains.
-- Browser checks with an isolated in-memory copy verified the homepage, square flashcard and book narration controls at widths 320, 390, 768 and 1365 px with no reported page JavaScript errors. Normal navigation and real photo downloading were blocked by the test environment, so the deployed site still needs device-side verification.
-- Cloud account creation, cross-device synchronization and authentication **cannot be verified or activated until the user's Supabase project exists and its public credentials are set in `supabase-config.js`**. The SQL migration remains included.
+**Small steps. Real progress. Endless possibilities.**
+
+---
+
+## 👩‍💻 Creator & Developer
+
+**Svenska Lätt** is an independently developed educational platform.
+
+**Created & Developed by:** [Your Full Name]  
+**Project:** Svenska Lätt  
+**Founded:** 2026  
+**Category:** Education · Language Learning · EdTech
+
+Built with creativity, dedication, and a passion for making Swedish language learning more accessible.
+
+💙 *Designed with care. Built with purpose.*
+
+---
+
+## 🔐 Copyright & Intellectual Property
+
+**© 2026 Svenska Lätt — [Your Full Name]. All rights reserved.**
+
+Svenska Lätt is a proprietary educational project.
+
+The original source code, original user interface designs, custom learning materials, and other original creative elements are protected by applicable intellectual property laws.
+
+**No open-source license is granted for this project.**
+
+Unless otherwise permitted by applicable law or the relevant platform's terms, you may not reproduce, modify, redistribute, republish, or commercially exploit protected original materials without prior written permission from the copyright holder.
+
+Public availability of this repository does not mean that its contents are released under an open-source license.
+
+### Third-Party Content
+
+Some photographs, educational videos, libraries, fonts, and other resources may belong to third-party copyright holders.
+
+Such materials remain subject to their respective licenses and terms of use. Svenska Lätt does not claim ownership of third-party content.
+
+### Permission Requests
+
+For licensing, collaboration, or permission inquiries, please contact the project owner through the official repository.
+
+---
+
+## 🤝 Project Status
+
+🚧 **Under Active Development**
+
+Svenska Lätt is continuously evolving.
+
+Future improvements may include expanded learning content, improved pronunciation tools, additional exercises, and enhanced cross-device learning experiences.
+
+Our goal is to make learning Swedish more interactive, accessible, and enjoyable for everyone.
+
+---
+
+### 🐿️ Vi lär oss svenska tillsammans!
+
+*Let's learn Swedish together!*
+
+**Made with 💙 for everyone learning Swedish.**
+
+🇸🇪 **Svenska Lätt — Learn Swedish, Your Way.**
+
+© 2026 Svenska Lätt. All rights reserved.

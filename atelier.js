@@ -198,7 +198,7 @@ function enhance(){enhanceHome();enhanceTopics();enhanceLessons();enhanceWords()
 }
 window.svPhotoForWord=photoForWord;
 /* Existing flashcard behaviour stays unchanged; only its old SVG artwork is replaced by real stock photography. */
-if(typeof pic==='function'){pic=function(w,large=false){const url=photoForWord(w);return `<span class="photo-word"><img loading="lazy" src="${escAttr(url)}" alt="" onerror="this.style.display='none'"><span class="word-fallback">${escAttr((w.word||'S')[0].toUpperCase())}</span></span>`;}}
+if(typeof pic==='function'){pic=function(w,large=false){const url=typeof route!=='undefined'&&route==='flashcards'?(window.svFlashPhotoForWord?.(w)||null):photoForWord(w);if(!url)return '';return `<span class="photo-word"><img loading="lazy" src="${escAttr(url)}" alt="" onerror="this.style.display='none'"><span class="word-fallback">${escAttr((w.word||'S')[0].toUpperCase())}</span></span>`;}}
 if(typeof render==='function'){
  const sourceRender=render;
  render=function(){sourceRender();enhance()};
