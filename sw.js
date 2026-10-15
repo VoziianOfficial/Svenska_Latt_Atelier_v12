@@ -1,7 +1,7 @@
 /* Svenska Lätt v12: cache application shell and previously-viewed photographs.
    External images remain third-party content. A picture has to load once online
    before it can be available offline. */
-const APP_CACHE='svenska-latt-v30-shell';
+const APP_CACHE='svenska-latt-v34-shell';
 const PHOTO_CACHE='svenska-latt-v23-photos';
 const PHOTO_LIMIT=150;
 const FILES=['./','./index.html','./style.css','./studio.css','./atelier.css','./learning-polish.css','./atelier.js','./learning-polish.js','./app.js','./locale-content.js','./supabase-config.js','./words.json','./lessons.json','./books.json','./favicon.svg','./manifest.webmanifest','./privacy.html','./terms.html','./cookies.html'];

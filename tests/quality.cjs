@@ -6,6 +6,17 @@ vm.createContext(fake);vm.runInContext(local,fake);vm.runInContext(code,fake);vm
 const run=s=>vm.runInContext(s,fake);function check(condition,message){if(!condition)throw new Error(message)}
 const ids=new Set();for(const w of words){check(w.id&&w.word,'bad word');check(!ids.has(w.id),'duplicate '+w.id);ids.add(w.id);check(w.ru&&w.en&&w.uk, 'missing translation '+w.word)}
 check(lessons.length===50,'Expected 50 lessons');check(books.length===12,'Expected 12 books');
+for(const w of words){
+  check(w.examples?.length===3,'Expected three examples: '+w.id);
+  check(new Set(w.examples.map(e=>e.sv)).size===3,'Duplicate examples: '+w.id);
+  check(w.examples.every(e=>typeof e.sv==='string'&&e.sv.trim().length>5),'Empty example: '+w.id);
+  check(w.examples.every(e=>e.sv.length<=35&&!/[\r\n]/.test(e.sv)),'Example too long: '+w.id);
+  const detail=run(`routeParam=${JSON.stringify(w.id)};renderWord()`);
+  check((detail.match(/class="word-example"/g)||[]).length===3,'Missing example cards: '+w.id);
+  for(const example of w.examples){
+    check(detail.includes(run(`'data-text="'+esc(${JSON.stringify(example.sv)})+'"'`)),'Missing example audio: '+w.id);
+  }
+}
 check(run('accountLevel3()')===1,'initial rank');run('state.xp=499');check(run('accountLevel3()')===1,'499 XP rank');run('state.xp=500');check(run('accountLevel3()')===2,'500 XP rank');run('state.xp=0');
 let cat=run(`topicNames3().map(c=>[c,topicWordsPlus(c).length])`);for(const [name,count] of cat)check(count>=30,`${name}: only ${count} vocabulary items`);
 for(const lang of ['ru','en','uk','sv']){
