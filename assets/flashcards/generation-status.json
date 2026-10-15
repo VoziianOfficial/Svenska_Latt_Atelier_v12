@@ -429,6 +429,158 @@
   },
   "w-snart": {
     "path": "./assets/flashcards/w-snart.webp",
+    "status": "reviewed"
+  },
+  "w-tidigt": {
+    "path": "./assets/flashcards/w-tidigt.webp",
+    "status": "reviewed"
+  },
+  "w-sent": {
+    "path": "./assets/flashcards/w-sent.webp",
+    "status": "reviewed"
+  },
+  "w-i-dag": {
+    "path": "./assets/flashcards/w-i-dag-v2.webp",
+    "status": "reviewed"
+  },
+  "w-i-går": {
+    "path": "./assets/flashcards/w-i-går.webp",
+    "status": "reviewed"
+  },
+  "w-i-morgon": {
+    "path": "./assets/flashcards/w-i-morgon.webp",
+    "status": "reviewed"
+  },
+  "w-morgon": {
+    "path": "./assets/flashcards/w-morgon.webp",
+    "status": "reviewed"
+  },
+  "w-middag": {
+    "path": "./assets/flashcards/w-middag.webp",
+    "status": "reviewed"
+  },
+  "w-kväll": {
+    "path": "./assets/flashcards/w-kväll.webp",
+    "status": "reviewed"
+  },
+  "w-natt": {
+    "path": "./assets/flashcards/w-natt.webp",
+    "status": "reviewed"
+  },
+  "w-måndag": {
+    "path": "./assets/flashcards/w-måndag.webp",
+    "status": "reviewed"
+  },
+  "w-tisdag": {
+    "path": "./assets/flashcards/w-tisdag.webp",
+    "status": "reviewed"
+  },
+  "w-onsdag": {
+    "path": "./assets/flashcards/w-onsdag.webp",
+    "status": "reviewed"
+  },
+  "w-torsdag": {
+    "path": "./assets/flashcards/w-torsdag.webp",
+    "status": "reviewed"
+  },
+  "w-fredag": {
+    "path": "./assets/flashcards/w-fredag.webp",
+    "status": "reviewed"
+  },
+  "w-lördag": {
+    "path": "./assets/flashcards/w-lördag.webp",
+    "status": "reviewed"
+  },
+  "w-söndag": {
+    "path": "./assets/flashcards/w-söndag.webp",
+    "status": "reviewed"
+  },
+  "w-januari": {
+    "path": "./assets/flashcards/w-januari.webp",
+    "status": "reviewed"
+  },
+  "w-februari": {
+    "path": "./assets/flashcards/w-februari.webp",
+    "status": "reviewed"
+  },
+  "w-mars": {
+    "path": "./assets/flashcards/w-mars.webp",
+    "status": "reviewed"
+  },
+  "w-april": {
+    "path": "./assets/flashcards/w-april.webp",
+    "status": "reviewed"
+  },
+  "w-maj": {
+    "path": "./assets/flashcards/w-maj.webp",
+    "status": "reviewed"
+  },
+  "w-juni": {
+    "path": "./assets/flashcards/w-juni.webp",
+    "status": "reviewed"
+  },
+  "w-juli": {
+    "path": "./assets/flashcards/w-juli.webp",
+    "status": "reviewed"
+  },
+  "w-augusti": {
+    "path": "./assets/flashcards/w-augusti.webp",
+    "status": "reviewed"
+  },
+  "w-september": {
+    "path": "./assets/flashcards/w-september.webp",
+    "status": "reviewed"
+  },
+  "w-oktober": {
+    "path": "./assets/flashcards/w-oktober.webp",
+    "status": "reviewed"
+  },
+  "w-november": {
+    "path": "./assets/flashcards/w-november.webp",
+    "status": "reviewed"
+  },
+  "w-december": {
+    "path": "./assets/flashcards/w-december.webp",
+    "status": "reviewed"
+  },
+  "w-två": {
+    "path": "./assets/flashcards/w-två.webp",
+    "status": "reviewed"
+  },
+  "w-en": {
+    "path": "./assets/flashcards/w-en.webp",
+    "status": "generated"
+  },
+  "w-tre": {
+    "path": "./assets/flashcards/w-tre.webp",
+    "status": "generated"
+  },
+  "w-fyra": {
+    "path": "./assets/flashcards/w-fyra.webp",
+    "status": "generated"
+  },
+  "w-fem": {
+    "path": "./assets/flashcards/w-fem.webp",
+    "status": "generated"
+  },
+  "w-sex": {
+    "path": "./assets/flashcards/w-sex.webp",
+    "status": "generated"
+  },
+  "w-sju": {
+    "path": "./assets/flashcards/w-sju.webp",
+    "status": "generated"
+  },
+  "w-åtta": {
+    "path": "./assets/flashcards/w-åtta.webp",
+    "status": "generated"
+  },
+  "w-nio": {
+    "path": "./assets/flashcards/w-nio.webp",
+    "status": "generated"
+  },
+  "w-tio": {
+    "path": "./assets/flashcards/w-tio.webp",
     "status": "generated"
   }
 }
