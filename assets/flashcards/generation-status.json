@@ -401,14 +401,34 @@
   },
   "w-kanske": {
     "path": "./assets/flashcards/w-kanske.webp",
-    "status": "generated"
+    "status": "reviewed"
   },
   "w-alltid": {
     "path": "./assets/flashcards/w-alltid.webp",
-    "status": "generated"
+    "status": "reviewed"
   },
   "w-aldrig": {
     "path": "./assets/flashcards/w-aldrig.webp",
+    "status": "reviewed"
+  },
+  "w-ibland": {
+    "path": "./assets/flashcards/w-ibland.webp",
+    "status": "reviewed"
+  },
+  "w-ofta": {
+    "path": "./assets/flashcards/w-ofta.webp",
+    "status": "reviewed"
+  },
+  "w-nu": {
+    "path": "./assets/flashcards/w-nu.webp",
+    "status": "reviewed"
+  },
+  "w-sedan": {
+    "path": "./assets/flashcards/w-sedan.webp",
+    "status": "reviewed"
+  },
+  "w-snart": {
+    "path": "./assets/flashcards/w-snart.webp",
     "status": "generated"
   }
 }
