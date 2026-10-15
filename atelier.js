@@ -121,20 +121,58 @@ function enhanceNumbers(){document.querySelectorAll('.number-item strong').forEa
  });}
 function decorateSlider(track){
  if(track.dataset.sliderReady)return;track.dataset.sliderReady='1';
+ const circular=track.matches('.action-grid.action-grid-4,.course-tiles');
+ let cycle=0,settleTimer,down=false;
+ const jump=left=>track.scrollTo({left,behavior:'instant'});
+ const originals=[...track.children];
+ const measureCycle=()=>originals.length?originals[0].getBoundingClientRect().left-track.children[0].getBoundingClientRect().left:0;
+ const normalize=()=>{
+  if(!circular||!cycle||down)return;
+  const left=track.scrollLeft;
+  if(left<cycle-.5||left>=cycle*2-.5){
+   const offset=((left-cycle)%cycle+cycle)%cycle;
+   jump(cycle+(cycle-offset<1?0:offset));
+  }
+ };
+ if(circular&&originals.length>1){
+  // Keep nth-child colours stable when inserting the surrounding cycles.
+  originals.forEach(card=>{
+   card.style.setProperty('background',getComputedStyle(card).background,'important');
+   const letter=card.querySelector('.letter');
+   if(letter)letter.style.setProperty('color',getComputedStyle(letter).color,'important');
+  });
+  const copy=card=>{
+   const clone=card.cloneNode(true);clone.dataset.sliderClone='1';
+   clone.setAttribute('aria-hidden','true');clone.setAttribute('tabindex','-1');
+   clone.querySelectorAll('[id]').forEach(el=>el.removeAttribute('id'));
+   clone.removeAttribute('id');
+   clone.querySelectorAll('button,a,input,select,[tabindex]').forEach(el=>el.setAttribute('tabindex','-1'));
+   return clone;
+  };
+  track.prepend(...originals.map(copy));track.append(...originals.map(copy));
+  cycle=measureCycle();jump(cycle);
+  track.addEventListener('scroll',()=>{clearTimeout(settleTimer);settleTimer=setTimeout(normalize,160)},{passive:true});
+  track.addEventListener('scrollend',normalize);
+  new ResizeObserver(()=>{
+   const next=measureCycle();if(!next||Math.abs(next-cycle)<.5)return;
+   const position=cycle?(track.scrollLeft-cycle)/cycle:0;cycle=next;
+   jump(cycle+((position%1+1)%1)*cycle);
+  }).observe(track);
+ }
  const section=track.previousElementSibling;
  let header=section?.classList?.contains('section-head')?section:null;
  if(!header && track.classList.contains('premium-topics')) { header=document.createElement('div');header.className='section-head topic-slider-head';const label=document.createElement('h2');label.textContent=({en:'Browse all topics',sv:'Bläddra bland ämnen',uk:'Переглянути всі теми',ru:'Листай все темы'})[document.documentElement.lang]||'Листай все темы';header.appendChild(label);track.parentElement.insertBefore(header,track); }
  if(header){const holder=document.createElement('div');holder.className='slider-tools';holder.innerHTML='<span class="slider-hint" aria-hidden="true">‹ ›</span><button class="slider-arrow" type="button" aria-label="Previous cards">‹</button><button class="slider-arrow" type="button" aria-label="Next cards">›</button>';
  header.appendChild(holder);
- const [prev,next]=holder.querySelectorAll('button');const gap=12;
- const update=()=>{prev.disabled=track.scrollLeft<5;next.disabled=track.scrollLeft+track.clientWidth>=track.scrollWidth-5};
- function shift(dir){const card=track.children[0];if(!card)return;const step=card.getBoundingClientRect().width+gap;track.scrollBy({left:step*dir,behavior:'smooth'})}
+ const [prev,next]=holder.querySelectorAll('button');
+ const update=()=>{prev.disabled=!circular&&track.scrollLeft<5;next.disabled=!circular&&track.scrollLeft+track.clientWidth>=track.scrollWidth-5};
+ function shift(dir){const card=track.children[0];if(!card)return;normalize();const step=card.getBoundingClientRect().width+parseFloat(getComputedStyle(track).columnGap||0);track.scrollBy({left:step*dir,behavior:'smooth'})}
  prev.addEventListener('click',()=>shift(-1));next.addEventListener('click',()=>shift(1));track.addEventListener('scroll',update,{passive:true});requestAnimationFrame(update);
  }
- let origin=0,base=0,dragged=false,down=false;
+ let origin=0,base=0,dragged=false;
  track.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'||e.button!==0)return;origin=e.clientX;base=track.scrollLeft;dragged=false;down=true});
  track.addEventListener('pointermove',e=>{if(!down||e.pointerType!=='mouse')return;const delta=e.clientX-origin;if(Math.abs(delta)>5){dragged=true;track.scrollLeft=base-delta}});
- const stop=()=>{down=false};track.addEventListener('pointerup',stop);track.addEventListener('pointercancel',stop);track.addEventListener('pointerleave',stop);
+ const stop=()=>{down=false;clearTimeout(settleTimer);settleTimer=setTimeout(normalize,160)};track.addEventListener('pointerup',stop);track.addEventListener('pointercancel',stop);track.addEventListener('pointerleave',stop);
  track.addEventListener('click',e=>{if(dragged){e.preventDefault();e.stopImmediatePropagation();dragged=false}},true);
 }
 function enhance(){enhanceHome();enhanceTopics();enhanceLessons();enhanceWords();enhanceModes();enhanceVideos();enhanceCheats();enhanceBooks();enhanceNumbers();
