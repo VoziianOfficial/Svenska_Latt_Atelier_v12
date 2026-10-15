@@ -398,5 +398,9 @@
   "w-nej": {
     "path": "./assets/flashcards/w-nej.webp",
     "status": "reviewed"
+  },
+  "w-kanske": {
+    "path": "./assets/flashcards/w-kanske.webp",
+    "status": "generated"
   }
 }
