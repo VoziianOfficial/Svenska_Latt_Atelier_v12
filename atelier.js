@@ -23,6 +23,23 @@ const CATEGORY={
  'Прилагательные':'colors','Транспорт':'transport','Путешествия':'travel','Животные':'animals','Природа':'nature',
  'Погода':'weather','Город и места':'city','Техника':'tech','Одежда':'clothes','Быт и дела':'room'
 };
+// Each topic has its own photograph, including topics sharing a vocabulary category.
+const TOPIC_PHOTOS={
+ 'Глаголы':pex(3769021),'Существительные':PH.reading,'Общение':PH.communication,
+ 'Время':PH.time,'Еда':PH.food,'Числа':PH.numbers,'Цвета':PH.colors,
+ 'Прилагательные':pex(845451),'Чувства':PH.feelings,'Здоровье':PH.health,
+ 'Местоимения':pex(5212345),'Вопросы':PH.questions,'Дом':PH.home,
+ 'Место':pex(6147369),'Предлоги':pex(271618),'Связки':PH.grammar,
+ 'Количество':pex(4386467),'Магазин':PH.shop,'Одежда':PH.clothes,
+ 'Погода':PH.weather,'Семья':PH.family,'Транспорт':PH.transport,
+ 'Тело':PH.body,'Учёба':PH.lessons,'Техника':PH.tech,
+ 'Досуг':pex(1386604),'Природа':PH.nature,'Животные':PH.animals,
+ 'Школа и SFI':PH.school,'Дом и комнаты':PH.room,'Еда и напитки':PH.drink,
+ 'Магазин и покупки':pex(4386431),'Дни и календарь':PH.calendar,'Работа':PH.work,
+ 'Город и места':PH.city,'Цвета и формы':pex(5303566),'Быт и дела':pex(6238130),
+ 'Досуг и спорт':PH.sport,'Общение и чувства':pex(7092613),'Общество':pex(7092359),
+ 'Счёт и количество':pex(5427860),'Путешествия':PH.travel
+};
 const LEVELS=[pex(5212330),pex(6238130),pex(3184298),pex(7092613)];
 const LESSONS=[
   pex(5212330),pex(5428010),pex(5940831),pex(4262425),pex(5212345),pex(1640774),pex(264507),
@@ -86,7 +103,7 @@ function enhanceHome(){const hero=document.querySelector('.hero');if(hero)hero.s
  document.querySelectorAll('.action-card').forEach(el=>tile(el,PH[ACTION[el.dataset.nav]]||PH.topics));
  document.querySelectorAll('.course-tile').forEach((el,i)=>tile(el,LEVELS[('ABCD'.indexOf(el.dataset.level)+4)%4]||LEVELS[i%4]));
 }
-function enhanceTopics(){document.querySelectorAll('.topic-card').forEach(el=>{const key=el.dataset.param||el.querySelector('h3')?.textContent?.trim();tile(el,PH[CATEGORY[key]]||PH.reading)})}
+function enhanceTopics(){document.querySelectorAll('.topic-card').forEach(el=>{const key=el.dataset.param||el.querySelector('h3')?.textContent?.trim();tile(el,TOPIC_PHOTOS[key]||PH[CATEGORY[key]]||PH.reading)})}
 function enhanceLessons(){document.querySelectorAll('.lesson-card').forEach((el,i)=>{
  const num=el.querySelector('.lesson-cover small')?.textContent||''; const selected=(typeof routeParam==='string'&&/^[ABCD]$/.test(routeParam))?routeParam:(typeof selectedLevel!=='undefined'?selectedLevel:'A');
  const base={'A':0,'B':13,'C':26,'D':39}[selected]||0;const url=LESSONS[(base+i)%LESSONS.length];
@@ -121,7 +138,7 @@ function enhanceNumbers(){document.querySelectorAll('.number-item strong').forEa
  });}
 function decorateSlider(track){
  if(track.dataset.sliderReady)return;track.dataset.sliderReady='1';
- const circular=track.matches('.action-grid.action-grid-4,.course-tiles');
+ const circular=track.matches('.action-grid.action-grid-4,.topic-grid.premium-topics,.course-tiles');
  let cycle=0,settleTimer,down=false;
  const jump=left=>track.scrollTo({left,behavior:'instant'});
  const originals=[...track.children];
@@ -147,6 +164,7 @@ function decorateSlider(track){
    clone.querySelectorAll('[id]').forEach(el=>el.removeAttribute('id'));
    clone.removeAttribute('id');
    clone.querySelectorAll('button,a,input,select,[tabindex]').forEach(el=>el.setAttribute('tabindex','-1'));
+   if(clone.classList.contains('topic-card'))tile(clone,TOPIC_PHOTOS[clone.dataset.param]||PH.reading);
    return clone;
   };
   track.prepend(...originals.map(copy));track.append(...originals.map(copy));
