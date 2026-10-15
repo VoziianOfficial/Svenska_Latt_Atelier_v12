@@ -30,6 +30,16 @@
 #page .rule-list li::before {
  left:12px; top:9px; line-height:inherit;
 }
+/* Rule examples keep their natural widths in one scrollable row. */
+#page .rule-details .example-grid {
+ display:flex!important; flex-wrap:nowrap; align-items:stretch; gap:11px!important;
+ max-width:100%; overflow-x:auto; padding-bottom:4px;
+}
+#page .rule-details .example-item {
+ flex:0 0 auto; width:max-content; align-content:center;
+}
+#page .rule-details .example-item b,
+#page .rule-details .example-item p { white-space:nowrap; }
 /* Lesson examples and mini-text cards follow their content and wrap naturally. */
 #page .lesson-examples,
 #page .lesson-reading {
@@ -100,7 +110,7 @@
 .speech-stop { display:inline-flex; align-items:center; justify-content:center; width:37px; height:37px; color:#354e79; background:#eef3fb; border:1px solid #dce6f6; border-radius:11px; }
 .reader-toolbar { display:flex!important; flex-wrap:wrap!important; justify-content:flex-start!important; align-items:center!important; gap:10px!important; }
 /* natural squirrel photo replaces old logo while keeping its exact text */
-.brand .premium-logo, .mobile-brand .mini-premium-logo { object-fit:cover!important; object-position:46% 42%!important; border-radius:14px!important; background:#dce8ce!important; }
+.brand .premium-logo, .mobile-brand .mini-premium-logo { height:auto!important; aspect-ratio:8 / 5; object-fit:contain!important; object-position:center!important; border-radius:0!important; background:transparent!important; box-shadow:none!important; filter:drop-shadow(0 3px 4px #153b5126); }
 @media(max-width:1000px){ .words-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;} }
 @media(max-width:650px){
  .flash-card { --flash-square:min(100%,310px); }
@@ -219,3 +229,13 @@
  .word-panel-actions .btn{flex:1;padding:11px 12px!important}
 }
 @media(prefers-reduced-motion:reduce){.word-panel .circle-btn{transition:none}.word-panel .circle-btn:hover{transform:none}}
+
+/* Space topic icons consistently from their labels. */
+#page .rule-topic-title { display:inline-flex; align-items:center; gap:8px; min-width:0; }
+#page .rule-topic-icon { flex:0 0 auto; }
+
+/* Keep all six large-number cards together in one row. */
+#page .large-number-grid {
+ grid-template-columns:repeat(6,minmax(190px,1fr))!important;
+ max-width:100%; overflow-x:auto; padding-bottom:6px;
+}

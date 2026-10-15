@@ -1,10 +1,10 @@
 /* Svenska Lätt v12: cache application shell and previously-viewed photographs.
    External images remain third-party content. A picture has to load once online
    before it can be available offline. */
-const APP_CACHE='svenska-latt-v38-shell';
+const APP_CACHE='svenska-latt-v44-shell';
 const PHOTO_CACHE='svenska-latt-v23-photos';
 const PHOTO_LIMIT=150;
-const FILES=['./','./index.html','./style.css','./studio.css','./atelier.css','./learning-polish.css','./atelier.js','./learning-polish.js','./flashcard-media.js','./assets/flashcards/work.webp','./app.js','./locale-content.js','./supabase-config.js','./words.json','./lessons.json','./books.json','./favicon.svg','./manifest.webmanifest','./privacy.html','./terms.html','./cookies.html'];
+const FILES=['./','./index.html','./style.css','./studio.css','./atelier.css','./learning-polish.css','./atelier.js','./learning-polish.js','./flashcard-media.js','./assets/flashcards/work.webp','./assets/avatars/pippi-cartoon.png','./app.js','./locale-content.js','./supabase-config.js','./words.json','./lessons.json','./books.json','./favicon.svg','./favicon.svg?v=42','./manifest.webmanifest','./privacy.html','./terms.html','./cookies.html'];
 self.addEventListener('install',e=>{
  e.waitUntil(caches.open(APP_CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting()));
 });
