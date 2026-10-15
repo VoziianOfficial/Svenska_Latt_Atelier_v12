@@ -377,26 +377,26 @@
   },
   "w-tack": {
     "path": "./assets/flashcards/w-tack.webp",
-    "status": "generated"
+    "status": "reviewed"
   },
   "w-snälla": {
     "path": "./assets/flashcards/w-snälla.webp",
-    "status": "generated"
+    "status": "reviewed"
   },
   "w-ursäkta": {
     "path": "./assets/flashcards/w-ursäkta.webp",
-    "status": "generated"
+    "status": "reviewed"
   },
   "w-förlåt": {
     "path": "./assets/flashcards/w-förlåt.webp",
-    "status": "generated"
+    "status": "reviewed"
   },
   "w-ja": {
     "path": "./assets/flashcards/w-ja.webp",
-    "status": "generated"
+    "status": "reviewed"
   },
   "w-nej": {
     "path": "./assets/flashcards/w-nej.webp",
-    "status": "generated"
+    "status": "reviewed"
   }
 }

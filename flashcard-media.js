@@ -99,7 +99,13 @@
   "n-cykel": "./assets/flashcards/n-cykel.webp",
   "n-klocka": "./assets/flashcards/n-klocka.webp",
   "w-hej": "./assets/flashcards/w-hej.webp",
-  "w-hejdå": "./assets/flashcards/w-hejdå.webp"
+  "w-hejdå": "./assets/flashcards/w-hejdå.webp",
+  "w-tack": "./assets/flashcards/w-tack.webp",
+  "w-snälla": "./assets/flashcards/w-snälla.webp",
+  "w-ursäkta": "./assets/flashcards/w-ursäkta.webp",
+  "w-förlåt": "./assets/flashcards/w-förlåt.webp",
+  "w-ja": "./assets/flashcards/w-ja.webp",
+  "w-nej": "./assets/flashcards/w-nej.webp"
 });
  window.svFlashPhotoForWord = word => photos[word?.id] || null;
 })();
