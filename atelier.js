@@ -109,14 +109,6 @@ function enhanceLessons(){document.querySelectorAll('.lesson-card').forEach((el,
  const base={'A':0,'B':13,'C':26,'D':39}[selected]||0;const url=LESSONS[(base+i)%LESSONS.length];
  back(el,url);const cover=el.querySelector('.lesson-cover');back(cover,url);
  });}
-let WORD_LOOKUP=new Map(),wordMapCount=-1;
-function makeWordLookup(){if(typeof WORDS!=='undefined'&&wordMapCount!==WORDS.length){WORD_LOOKUP=new Map(WORDS.flatMap(w=>[[w.word,w],[`${w.article||''} ${w.word}`.trim(),w]]));wordMapCount=WORDS.length;}}
-function enhanceWords(){makeWordLookup();document.querySelectorAll('.word-row').forEach(el=>{
- const word=el.querySelector('.word-info strong')?.textContent?.trim();
- if(!word)return;let entry=WORD_LOOKUP.get(word)||null;
- const url=photoForWord(entry||{word});const holder=el.querySelector('.word-visual');
- if(holder && holder.dataset.photoUrl!==url){holder.dataset.photoUrl=url;holder.querySelectorAll('img').forEach(i=>i.remove());if(!holder.querySelector('.word-fallback')){const fallback=document.createElement('span');fallback.className='word-fallback';fallback.textContent=word.charAt(0).toUpperCase();holder.appendChild(fallback)}holder.appendChild(image(url,'word-photo'));}
- });}
 function enhanceModes(){document.querySelectorAll('.mode-card').forEach((el,i)=>{
  back(el,MODES[i%MODES.length]);if(!el.querySelector(':scope > .tile-photo'))el.appendChild(image(MODES[i%MODES.length],'tile-photo'));
  });}
@@ -193,7 +185,7 @@ function decorateSlider(track){
  const stop=()=>{down=false;clearTimeout(settleTimer);settleTimer=setTimeout(normalize,160)};track.addEventListener('pointerup',stop);track.addEventListener('pointercancel',stop);track.addEventListener('pointerleave',stop);
  track.addEventListener('click',e=>{if(dragged){e.preventDefault();e.stopImmediatePropagation();dragged=false}},true);
 }
-function enhance(){enhanceHome();enhanceTopics();enhanceLessons();enhanceWords();enhanceModes();enhanceVideos();enhanceCheats();enhanceBooks();enhanceNumbers();
+function enhance(){enhanceHome();enhanceTopics();enhanceLessons();enhanceModes();enhanceVideos();enhanceCheats();enhanceBooks();enhanceNumbers();
  document.querySelectorAll('.action-grid.action-grid-4,.topic-grid.premium-topics,.course-tiles').forEach(decorateSlider);
 }
 window.svPhotoForWord=photoForWord;
